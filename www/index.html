@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+   <ion-nav-bar animation="nav-title-slide-ios7" 
+                 type="bar-positive" 
+                 back-button-type="button-icon" 
+                 back-button-icon="ion-arrow-left-c"></ion-nav-bar>
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+   <script id="signin.html" type="text/ng-template">
+		  <ion-view title="table data">  
+		
+ 
+		<ion-content scroll="false"  has-header="true" padding="true">
+		
+
+					<ion-scroll direction="x" scrollbar-x="false" delegate-handle="head" zooming="true" on-scroll="scrollMirror('head', 'list')">
+        <div class="item item-header item-positive row row-item with-area  ">
+          <div class="col sl-width" >Sl</div>
+          <div class="col branch-width">Branch Name</div>
+          <div class="col address-width" >Address</div>
+          <div class="col fx-width">Fax</div>
+		  <div class="col   phone-width">Phone</div>
+		  <div class="col narration-width">Narration</div>
+		
+        
+        </div>
+      </ion-scroll>
+	  
+	  	  <ion-scroll direction="xy"  zooming="true" on-scroll="scrollMirror('list', 'head')" delegate-handle="list">
+        <div class="item row row-item with-area  " ng-repeat="x in rows ">
+          <div class="col sl-width col-sep ">{{x.id}}</div>
+          <div class="col branch-width col-sep ">{{x.branch}}</div>
+          <div class="col address-width col-sep">{{x.address}}</div>
+          <div class="col fx-width col-sep">{{x.fax}}</div>
+		  <div class="col phone-width col-sep">{{x.ph}}</div>
+        <div class="col narration-width col-sep">{{x.naration}}</div>
+        </div>
+     
+
+      </ion-scroll>
+
+
+		</ion-content>
+
+	
+		  </ion-view>
+    </script>
+  </body>
+</html>

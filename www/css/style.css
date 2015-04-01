@@ -1,0 +1,15 @@
+/* Empty. Add your own CSS if you like */
+
+.col-sep {
+    border-left: 1px solid lightgray;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.with-area { width: 700px; }
+.sl-width{width: 50px;}
+.branch-width{width: 100px;}
+.address-width{width: 200px;}
+.phone-width{width: 100px;}
+.fx-width{width: 100px;}
+.narration-width{width: 150px;}
